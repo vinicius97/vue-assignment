@@ -1,5 +1,5 @@
-<template lang='pug'>
-  header 'Cabeçalho'
+<template>
+  
 </template>
 
 <script>
