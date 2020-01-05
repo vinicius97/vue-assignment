@@ -1,11 +1,16 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import App from './App.vue'
-
-// Routes
 Vue.use(VueRouter);
 
+// Pages
+import App from './App.vue'
+import CompanyData from './Company/CompanyData.vue'
+
 const routes = [
+  {
+    path: '/',
+    component: CompanyData
+  },
   {
     path: '*',
     component: App

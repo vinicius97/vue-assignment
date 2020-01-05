@@ -1,10 +1,10 @@
 <template lang="pug">
   v-layout
-    div 'Ola mundo'
+    div Ola mundo
 </template>
 
 <script>
-import VLayout from "Components/Layout/VLayout.vue";
+import VLayout from "Components/VLayout/VLayout.vue";
 export default {
   components: {
     VLayout
