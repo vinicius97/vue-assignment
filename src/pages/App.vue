@@ -1,7 +1,13 @@
-<template>
-  <h1>Hello world!</h1>
+<template lang="pug">
+  v-layout
+    div 'Ola mundo'
 </template>
 
 <script>
-export default {};
+import VLayout from "Components/Layout/VLayout.vue";
+export default {
+  components: {
+    VLayout
+  }
+};
 </script>
