@@ -5,31 +5,40 @@
         | Company data
       template
         v-form-group
-          v-input-text
+          v-input-field(
+            name='company-name'
+          )
         v-form-group
-          v-input-number
+          v-input-field-money(
+            name='company-spend'
+          )
         v-form-group
-          v-input-range(placeholder='teste')
+          v-input-field-money-range(
+            placeholder='e.g. $150,000 - $330,000', 
+            name='company-spend-ability'
+          )
         v-form-group
-          v-text-area
+          v-text-area(
+            name='company-notes'
+          )
 </template>
 
 <script>
 import VLayout from "Components/VLayout/VLayout.vue";
 import VContainer from "Components/VContainer/VContainer.vue";
 import VFormGroup from "Components/VForm/VFormGroup.vue";
-import VInputText from "Components/VForm/VInputText.vue";
-import VInputNumber from "Components/VForm/VInputNumber.vue";
-import VInputRange from "Components/VForm/VInputRange.vue";
+import VInputField from "Components/VForm/VInputField.vue";
+import VInputFieldMoney from "Components/VForm/VInputFieldMoney.vue";
+import VInputFieldMoneyRange from "Components/VForm/VInputFieldMoneyRange.vue";
 import VTextArea from "Components/VForm/VTextArea.vue";
 
 export default {
   components: {
     VContainer,
     VFormGroup,
-    VInputNumber,
-    VInputRange,
-    VInputText,
+    VInputField,
+    VInputFieldMoney,
+    VInputFieldMoneyRange,
     VLayout,
     VTextArea
   }

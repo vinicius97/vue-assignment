@@ -9,6 +9,7 @@
 import ErrorMessages from "../../constants/ErrorMessages.js";
 export default {
   props: {
+    name: String,
     placeholder: String
   },
   data: function() {

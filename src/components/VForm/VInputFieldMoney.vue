@@ -1,31 +1,28 @@
 <template lang="pug">
-  div
-    input(v-model.trim="numberValue", @keypress='isNumerical($event)', :placeholder='placeholder')
-    div(v-if='error')
-      | {{ error.message }}
+  v-input-field(
+    v-model="inputValue", 
+    :placeholder="placeholder",
+    :validator="validateInputValue"
+    @keypress="isNumerical($event)"
+  )
 </template>
 
 <script>
-import ErrorMessages from "../../constants/ErrorMessages";
+import VInputField from "./VInputField.vue";
 
 export default {
+  components: {
+    VInputField
+  },
   props: {
+    name: String,
     placeholder: String
   },
   data: function() {
     return {
-      numberValue: "",
+      inputValue: "",
       error: null
     };
-  },
-  watch: {
-    numberValue: function(val, oldVal) {
-      if (val === "") {
-        this.error = { message: ErrorMessages.THIS_FIELD_CANNOT_BE_EMPTY };
-      } else {
-        this.error = null;
-      }
-    }
   },
   methods: {
     isNumerical(event) {
@@ -35,6 +32,13 @@ export default {
       if (!isAcceptable) {
         event.preventDefault();
       }
+    },
+    validateInputValue(value) {
+      if (value === "") {
+        return { message: 'Error' };
+      }
+
+      return null
     }
   }
 };
