@@ -1,5 +1,6 @@
 <template lang="pug">
   div
+    label {{ label }}
     textarea(v-model.trim="textValue", :placeholder='placeholder')
     div(v-if='error')
       | {{ error.message }}
@@ -9,7 +10,7 @@
 import ErrorMessages from "../../constants/ErrorMessages.js";
 export default {
   props: {
-    name: String,
+    label: String,
     placeholder: String
   },
   data: function() {

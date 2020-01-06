@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    label(for='company-name') Company name
+    label {{ label }}
     input(
       v-model.trim="inputValue", 
       :name="name"

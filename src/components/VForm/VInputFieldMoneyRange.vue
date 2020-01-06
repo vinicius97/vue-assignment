@@ -1,5 +1,6 @@
 <template lang="pug">
   v-input-field(
+    :label="label"
     :placeholder="placeholder",
     :validator="validateInputValue"
     @keypress="isNumerical($event)"
@@ -15,7 +16,7 @@ export default {
     VInputField
   },
   props: {
-    name: String,
+    label: String,
     placeholder: String
   },
   data: function() {

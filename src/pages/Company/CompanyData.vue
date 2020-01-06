@@ -6,20 +6,21 @@
       template
         v-form-group
           v-input-field(
-            name='company-name'
+            label='Company Name'
           )
         v-form-group
           v-input-field-money(
-            name='company-spend'
+            label='Company Spend'
+            placeholder='e.g. $150,000 - $330,000', 
           )
         v-form-group
           v-input-field-money-range(
+            label='Company Spend Ability'
             placeholder='e.g. $150,000 - $330,000', 
-            name='company-spend-ability'
           )
         v-form-group
           v-text-area(
-            name='company-notes'
+            label='Notes' 
           )
 </template>
 
