@@ -1,6 +1,7 @@
 import Company from "./Company.vue";
 import CompanyData from "./CompanyData.vue";
 import CompanyPage from "./CompanyPage.vue";
+import CompanyTable from "./CompanyTable.vue";
 
 export const routes = [
   {
@@ -29,7 +30,7 @@ export const routes = [
         label: "Company Table",
         name: "company-table",
         path: "/company/table",
-        component: CompanyData,
+        component: CompanyTable,
         meta: {
           breadcrumb: [
             {
@@ -60,7 +61,7 @@ export const routes = [
             }
           ]
         }
-      }
+      }      
     ]
   }
 ];
