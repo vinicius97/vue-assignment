@@ -1,31 +1,29 @@
 <template lang="pug">
-  v-layout(:navigation-options="navigationOptions")
-    v-container
-      template(slot='header')
-        | Company data
-      template
-        v-form-group
-          v-form-input-field(
-            label='Company Name'
-          )
-        v-form-group
-          v-form-input-field-money(
-            label='Company Spend'
-            placeholder='e.g. $150,000 - $330,000', 
-          )
-        v-form-group
-          v-form-input-field-money-range(
-            label='Company Spend Ability'
-            placeholder='e.g. $150,000 - $330,000', 
-          )
-        v-form-group
-          v-form-text-area(
-            label='Notes' 
-          )
+  v-container
+    template(slot='header')
+      | Company data
+    template
+      v-form-group
+        v-form-input-field(
+          label='Company Name'
+        )
+      v-form-group
+        v-form-input-field-money(
+          label='Company Spend'
+          placeholder='e.g. $150,000 - $330,000', 
+        )
+      v-form-group
+        v-form-input-field-money-range(
+          label='Company Spend Ability'
+          placeholder='e.g. $150,000 - $330,000', 
+        )
+      v-form-group
+        v-form-text-area(
+          label='Notes' 
+        )
 </template>
 
 <script>
-import VLayout from "Components/VLayout/VLayout.vue";
 import VContainer from "Components/VContainer/VContainer.vue";
 import VFormGroup from "Components/VForm/VFormGroup.vue";
 import VFormInputField from "Components/VForm/VFormInputField.vue";
@@ -41,23 +39,6 @@ export default {
     VFormInputFieldMoney,
     VFormInputFieldMoneyRange,
     VFormTextArea,
-    VLayout
-  },
-  data: function() {
-
-    //TODO MAKE IT GLOBAL TO BE REUSED IN ANOTHER COMPONENT
-    return {
-      navigationOptions: [{
-        label: 'Company Data',
-        path: '/company/data'
-      },{
-        label: 'Company Table',
-        path: '/company/table'
-      },{
-        label: 'Company Page',
-        path: '/company/page'
-      }]
-    }
   }
 };
 </script>

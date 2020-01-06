@@ -1,19 +1,16 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 // Pages
-import App from './App.vue'
-import CompanyData from './Company/CompanyData.vue'
+import App from "./App.vue";
+import { routes as companyRoutes } from "./Company";
 
 const routes = [
   {
-    path: '/',
-    component: App
-  },
-  {
-    path: '/company/data',
-    component: CompanyData
+    path: "/",
+    component: App,
+    children: [...companyRoutes]
   }
 ];
 
