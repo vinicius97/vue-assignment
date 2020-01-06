@@ -8,9 +8,9 @@
 </template>  
 
 <script>
-import VFooter from './VFooter.vue'
-import VHeader from './VHeader.vue'
-import VSidebar from './VSidebar.vue'
+import VFooter from './VLayoutFooter.vue'
+import VHeader from './VLayoutHeader.vue'
+import VSidebar from './VLayoutSidebar.vue'
 
 export default {
   components: {

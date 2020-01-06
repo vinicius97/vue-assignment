@@ -1,6 +1,5 @@
 <template lang="pug">
-  v-input-field(
-    v-model="inputValue", 
+  v-form-input-field(
     :label="label"
     :placeholder="placeholder",
     :validator="validateInputValue"
@@ -9,11 +8,12 @@
 </template>
 
 <script>
-import VInputField from "./VInputField.vue";
+import ErrorMessages from '../../constants/ErrorMessages'
+import VFormInputField from "./VFormInputField.vue";
 
 export default {
   components: {
-    VInputField
+    VFormInputField
   },
   props: {
     label: String,
@@ -21,7 +21,6 @@ export default {
   },
   data: function() {
     return {
-      inputValue: "",
       error: null
     };
   },

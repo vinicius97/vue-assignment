@@ -5,21 +5,21 @@
         | Company data
       template
         v-form-group
-          v-input-field(
+          v-form-input-field(
             label='Company Name'
           )
         v-form-group
-          v-input-field-money(
+          v-form-input-field-money(
             label='Company Spend'
             placeholder='e.g. $150,000 - $330,000', 
           )
         v-form-group
-          v-input-field-money-range(
+          v-form-input-field-money-range(
             label='Company Spend Ability'
             placeholder='e.g. $150,000 - $330,000', 
           )
         v-form-group
-          v-text-area(
+          v-form-text-area(
             label='Notes' 
           )
 </template>
@@ -28,20 +28,20 @@
 import VLayout from "Components/VLayout/VLayout.vue";
 import VContainer from "Components/VContainer/VContainer.vue";
 import VFormGroup from "Components/VForm/VFormGroup.vue";
-import VInputField from "Components/VForm/VInputField.vue";
-import VInputFieldMoney from "Components/VForm/VInputFieldMoney.vue";
-import VInputFieldMoneyRange from "Components/VForm/VInputFieldMoneyRange.vue";
-import VTextArea from "Components/VForm/VTextArea.vue";
+import VFormInputField from "Components/VForm/VFormInputField.vue";
+import VFormInputFieldMoney from "Components/VForm/VFormInputFieldMoney.vue";
+import VFormInputFieldMoneyRange from "Components/VForm/VFormInputFieldMoneyRange.vue";
+import VFormTextArea from "Components/VForm/VFormTextArea.vue";
 
 export default {
   components: {
     VContainer,
     VFormGroup,
-    VInputField,
-    VInputFieldMoney,
-    VInputFieldMoneyRange,
-    VLayout,
-    VTextArea
+    VFormInputField,
+    VFormInputFieldMoney,
+    VFormInputFieldMoneyRange,
+    VFormTextArea,
+    VLayout
   }
 };
 </script>
