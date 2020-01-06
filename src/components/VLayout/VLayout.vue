@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     v-header
-    v-sidebar
+    v-sidebar(:navigation-options="navigationOptions")
     div
       slot
     v-footer
@@ -17,6 +17,9 @@ export default {
     VFooter,
     VHeader,
     VSidebar
+  },
+  props: {
+    navigationOptions: Array
   }
 }
 </script>

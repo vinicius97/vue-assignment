@@ -1,7 +1,7 @@
 <template lang='pug'>
   div
     v-layout-breadcrumb
-    v-layout-side-navigation
+    v-layout-side-navigation(:options="navigationOptions")
 </template>
 
 <script>
@@ -11,6 +11,9 @@ export default {
   components:  {
     VLayoutBreadcrumb,
     VLayoutSideNavigation
+  },
+  props: {
+    navigationOptions: Array
   }
 }
 </script>

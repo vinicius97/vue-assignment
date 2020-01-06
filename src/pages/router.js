@@ -9,11 +9,11 @@ import CompanyData from './Company/CompanyData.vue'
 const routes = [
   {
     path: '/',
-    component: CompanyData
+    component: App
   },
   {
-    path: '*',
-    component: App
+    path: '/company/data',
+    component: CompanyData
   }
 ];
 

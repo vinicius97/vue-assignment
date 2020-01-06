@@ -1,6 +1,7 @@
 <template lang="pug">
-  v-layout
-    div Ola mundo
+  transition
+    keep-alive
+      router-view
 </template>
 
 <script>

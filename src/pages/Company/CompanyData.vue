@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-layout
+  v-layout(:navigation-options="navigationOptions")
     v-container
       template(slot='header')
         | Company data
@@ -42,6 +42,22 @@ export default {
     VFormInputFieldMoneyRange,
     VFormTextArea,
     VLayout
+  },
+  data: function() {
+
+    //TODO MAKE IT GLOBAL TO BE REUSED IN ANOTHER COMPONENT
+    return {
+      navigationOptions: [{
+        label: 'Company Data',
+        path: '/company/data'
+      },{
+        label: 'Company Table',
+        path: '/company/table'
+      },{
+        label: 'Company Page',
+        path: '/company/page'
+      }]
+    }
   }
 };
 </script>
