@@ -6,4 +6,18 @@
       slot
 </template>
 
-<style lang="scss" src="./VContainer.scss" scoped></style>
+<style lang="scss" scoped>
+  .v-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+
+    &__header {
+      border-bottom: 1px solid;
+    }
+
+    &__body {
+      padding: 25px;
+    }
+  }
+</style>
