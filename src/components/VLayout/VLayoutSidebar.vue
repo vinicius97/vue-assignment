@@ -7,6 +7,7 @@
 <script>
 import VLayoutBreadcrumb from './VLayoutBreadcrumb.vue'
 import VLayoutSideNavigation from './VLayoutSideNavigation.vue'
+
 export default {
   components:  {
     VLayoutBreadcrumb,
