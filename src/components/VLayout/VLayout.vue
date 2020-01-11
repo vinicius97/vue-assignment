@@ -1,10 +1,12 @@
 <template lang="pug">
   .v-layout
     v-layout-header
-    v-layout-breadcrumb
-    .v-layout__body
-      v-layout-sidebar(:navigation-options="navigationOptions")
-      slot
+    .v-layout__container
+      .v-layout__sub-header
+        v-layout-breadcrumb
+      .v-layout__body
+        v-layout-sidebar(:navigation-options="navigationOptions")
+        slot
     v-layout-footer
 </template>
 
@@ -32,9 +34,25 @@ export default {
   display: flex;
   flex-direction: column;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
   &__body {
     display: flex;
     flex-direction: row;
+    width: 100%;
+  }
+
+  &__sub-header {
+    display: flex;
+    width: 100%;
+    height: 80px;
   }
 }
 </style>

@@ -1,10 +1,14 @@
-<template>
-  
+<template lang="pug">
+  v-container
 </template>
 
 <script>
-export default {
+import VContainer from "Components/VContainer/VContainer.vue";
 
+export default {
+  components: {
+    VContainer
+  }
 }
 </script>
 

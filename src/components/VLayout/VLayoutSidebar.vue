@@ -18,7 +18,6 @@ export default {
 
 <style lang="scss">
 .v-layout-sidebar {
-  display: flex;
-  margin: 40px;
+  margin-right: 40px;
 }
 </style>
