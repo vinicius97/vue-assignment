@@ -1,1 +1,13 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  // Main colors
+  --primary-color: #344279;
+  --border-color: #dedede;
 
+  // Component colors
+  --list-active-item: #dedede;
+  --list-hover-color: #f5f5f5;
+  --header-background-color: #394783;
+  --layout-background-color: white;
+}

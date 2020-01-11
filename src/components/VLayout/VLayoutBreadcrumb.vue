@@ -13,17 +13,17 @@ export default {
   },
   watch: {
     $route: function() {
-      this.loadBreandcrumbs()
+      this.loadBreandcrumbs();
     }
   },
   methods: {
     loadBreandcrumbs() {
       const routeBreadCrumbs = this.$route.meta && this.$route.meta.breadcrumb;
-      this.breadcrumbs = routeBreadCrumbs ? routeBreadCrumbs : []
+      this.breadcrumbs = routeBreadCrumbs ? routeBreadCrumbs : [];
     }
   },
   created: function() {
-    this.loadBreandcrumbs()
+    this.loadBreandcrumbs();
   }
 };
 </script>

@@ -1,29 +1,40 @@
 <template lang="pug">
-  div
-    v-header
-    v-sidebar(:navigation-options="navigationOptions")
-    div
+  .v-layout
+    v-layout-header
+    v-layout-breadcrumb
+    .v-layout__body
+      v-layout-sidebar(:navigation-options="navigationOptions")
       slot
-    v-footer
-</template>  
+    v-layout-footer
+</template>
 
 <script>
-import VFooter from './VLayoutFooter.vue'
-import VHeader from './VLayoutHeader.vue'
-import VSidebar from './VLayoutSidebar.vue'
+import VLayoutFooter from "./VLayoutFooter.vue";
+import VLayoutHeader from "./VLayoutHeader.vue";
+import VLayoutSidebar from "./VLayoutSidebar.vue";
+import VLayoutBreadcrumb from './VLayoutBreadcrumb.vue'
 
 export default {
   components: {
-    VFooter,
-    VHeader,
-    VSidebar
+    VLayoutFooter,
+    VLayoutHeader,
+    VLayoutSidebar,
+    VLayoutBreadcrumb
   },
   props: {
     navigationOptions: Array
   }
-}
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+.v-layout {
+  display: flex;
+  flex-direction: column;
 
+  &__body {
+    display: flex;
+    flex-direction: row;
+  }
+}
 </style>

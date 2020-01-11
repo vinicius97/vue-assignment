@@ -1,24 +1,24 @@
-<template lang='pug'>
-  div
-    v-layout-breadcrumb
+<template lang="pug">
+  .v-layout-sidebar
     v-layout-side-navigation(:options="navigationOptions")
 </template>
 
 <script>
-import VLayoutBreadcrumb from './VLayoutBreadcrumb.vue'
-import VLayoutSideNavigation from './VLayoutSideNavigation.vue'
+import VLayoutSideNavigation from "./VLayoutSideNavigation.vue";
 
 export default {
-  components:  {
-    VLayoutBreadcrumb,
+  components: {
     VLayoutSideNavigation
   },
   props: {
     navigationOptions: Array
   }
-}
+};
 </script>
 
-<style>
-
+<style lang="scss">
+.v-layout-sidebar {
+  display: flex;
+  margin: 40px;
+}
 </style>
