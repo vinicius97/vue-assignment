@@ -1,5 +1,8 @@
 <template lang="pug">
   v-container
+    .company-description
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
     .company-input__size--50
       v-form-input-field(
         label='Company Name'
@@ -7,7 +10,7 @@
     .company-input__size--50
       v-form-input-field-money(
         label='Company Spend'
-        placeholder='e.g. $150,000 - $330,000', 
+        placeholder='e.g. $150,000', 
       )
     .company-input__size--50
       v-form-input-field-money-range(
@@ -39,6 +42,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .company-description {
+    margin-bottom: 15px; 
+  }
   .company-input {
     &__size {
       &--50 {

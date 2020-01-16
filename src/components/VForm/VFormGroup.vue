@@ -9,7 +9,7 @@ export default {};
 
 <style lang="scss" scoped>
 .v-form-group {
-  padding: 15px 20px;
+  padding: 10px 0px;
   display: flex;
   flex-direction: column;
 

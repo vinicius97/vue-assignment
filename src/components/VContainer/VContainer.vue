@@ -40,5 +40,9 @@ export default {
         display: none;
       }
     }
+
+    &__body {
+      padding: 20px;
+    }
   }
 </style>
