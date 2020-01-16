@@ -42,7 +42,7 @@ export default {
     align-items: center;
     width: 1200px;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   &__body {

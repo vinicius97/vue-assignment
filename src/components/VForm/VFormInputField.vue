@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  v-form-group
     label {{ label }}
     input(
       v-model.trim="inputValue", 
@@ -12,7 +12,12 @@
 </template>
 
 <script>
+import VFormGroup from "Components/VForm/VFormGroup.vue";
+
 export default {
+  components: {
+    VFormGroup
+  },
   props: {
     label: String,
     name: String,
@@ -33,7 +38,7 @@ export default {
   },
   watch: {
     inputValue: function(val, oldVal) {
-      this.error = this.validator(val)
+      this.error = this.validator(val);
     }
   }
 };

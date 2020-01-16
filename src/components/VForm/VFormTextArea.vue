@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  v-form-group
     label {{ label }}
     textarea(v-model.trim="textValue", :placeholder='placeholder')
     div(v-if='error')
@@ -8,7 +8,12 @@
 
 <script>
 import ErrorMessages from "../../constants/ErrorMessages.js";
+import VFormGroup from "Components/VForm/VFormGroup.vue";
+
 export default {
+  components: {
+    VFormGroup
+  },
   props: {
     label: String,
     placeholder: String

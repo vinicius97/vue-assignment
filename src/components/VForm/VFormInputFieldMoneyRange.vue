@@ -9,11 +9,13 @@
 
 <script>
 import ErrorMessages from '../../constants/ErrorMessages'
+import VFormGroup from "Components/VForm/VFormGroup.vue";
 import VFormInputField from "./VFormInputField.vue";
 
 export default {
   components: {
-    VFormInputField
+    VFormInputField,
+    VFormGroup
   },
   props: {
     label: String,
