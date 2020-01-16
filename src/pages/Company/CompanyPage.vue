@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-container
+  v-container(withoutBorder=true)
     v-company-resume
     v-card
       template(slot='header') Activities

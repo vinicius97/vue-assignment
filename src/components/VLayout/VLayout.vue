@@ -33,6 +33,8 @@ export default {
 .v-layout {
   display: flex;
   flex-direction: column;
+  background: #e7e9f3;
+  height: 100%;
 
   &__container {
     display: flex;

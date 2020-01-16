@@ -50,6 +50,7 @@ export default {
   border: 1px solid var(--border-color);
   border-radius: 5px;
   width: 300px;
+  background: #ffffff;
 
   &__list {
     padding: 0px;
@@ -57,7 +58,7 @@ export default {
 
     &__item {
       display: flex;
-      height: 80px;
+      height: 65px;
       border-bottom: 1px solid var(--border-color);
       text-decoration: none;
       list-style: none;
