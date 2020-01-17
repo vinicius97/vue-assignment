@@ -1,7 +1,8 @@
 <template lang="pug">
   v-container(withoutBorder=true)
-    v-company-resume
     .company__page
+      .company__page__row
+        v-card-company(:company='company')
       .company__page__column--a
         v-card
           template(slot='header') Activities
@@ -24,9 +25,9 @@
 <script>
 // Components
 import VCard from 'Components/VCard/VCard.vue'
+import VCardCompany from 'Components/VCard/VCardCompany.vue'
 import VList from 'Components/VList/VList.vue'
 import VListActions from 'Components/VList/VListActions.vue'
-import VCompanyResume from 'Components/VCompanyResume/VCompanyResume.vue'
 import VContainer from "Components/VContainer/VContainer.vue";
 
 // Mocks
@@ -37,16 +38,22 @@ import MockedCompanySpendStory from '../../__mocks__/CompanySpendStory.js'
 export default {
   components: {
     VCard,
+    VCardCompany,
     VList,
     VListActions,
-    VCompanyResume,
     VContainer
   },
   data: function() {
     return {
       activitiesList: MockedActivities,
       similarCompanies: MockedSimilarCompanies,
-      spendStory: MockedCompanySpendStory
+      spendStory: MockedCompanySpendStory,
+      company: {
+        logo: require('../../images/companies/microsoft.png'),
+        title: 'Microsoft',
+        location: 'Redmond, WA USA',
+        description: 'At Microsoft, our mission is to empower every person and every organization on the planet.'
+      }
     }
   }
 }
@@ -56,6 +63,13 @@ export default {
 .company {
   &__page {
     display: flex;
+    flex-wrap: wrap;
+
+    &__row {
+      flex-basis: 100%;
+      flex-shrink: 0;
+    }
+
     &__column {
       &--a,
       &--b {
