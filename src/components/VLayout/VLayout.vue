@@ -1,13 +1,14 @@
 <template lang="pug">
   .v-layout
     v-layout-header
-    .v-layout__container
-      .v-layout__sub-header
-        v-layout-breadcrumb
-      .v-layout__body
-        v-layout-sidebar(:navigation-options="navigationOptions")
-        slot
-    v-layout-footer
+    .v-layout__scrollable-area
+      .v-layout__container
+        .v-layout__sub-header
+          v-layout-breadcrumb
+        .v-layout__body
+          v-layout-sidebar(:navigation-options="navigationOptions")
+          slot
+      v-layout-footer
 </template>
 
 <script>
@@ -35,6 +36,13 @@ export default {
   flex-direction: column;
   background: #e7e9f3;
   height: 100%;
+  overflow: hidden;
+
+  &__scrollable-area {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__container {
     display: flex;
