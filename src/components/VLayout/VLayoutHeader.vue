@@ -31,7 +31,7 @@ export default {
 .v-layout-header {
   background-color: #394783;
   width: 100%;
-  height: 70px;
+  max-height: 70px;
   display: flex;
   align-items: center;
 
@@ -41,6 +41,7 @@ export default {
     align-items: center;
     max-width: 1220px;
     width: 100%;
+    height: 70px;
     margin: auto;
   }
 
