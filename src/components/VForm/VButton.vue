@@ -1,7 +1,6 @@
-<template>
-  <button class="btn btn--primary">
-    <slot></slot>
-  </button>
+<template lang="pug">
+  button.btn.btn--primary
+    slot
 </template>
 
 <style lang="scss" scoped>
