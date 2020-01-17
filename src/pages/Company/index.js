@@ -5,13 +5,13 @@ import CompanyTable from "./CompanyTable.vue";
 
 export const routes = [
   {
-    path: "/company",
+    path: "/",
     component: Company,
     children: [
       {
         label: "Company Data",
         name: "company-data",
-        path: "/company/data",
+        path: "/company-data",
         component: CompanyData,
         meta: {
           breadcrumb: [
@@ -21,7 +21,7 @@ export const routes = [
             },
             { 
               label: "Company Data",
-              path: "/company/data"
+              path: "/company-data"
             }
           ]
         }
@@ -29,7 +29,7 @@ export const routes = [
       {
         label: "Company Table",
         name: "company-table",
-        path: "/company/table",
+        path: "/company-table",
         component: CompanyTable,
         meta: {
           breadcrumb: [
@@ -39,7 +39,7 @@ export const routes = [
             },
             { 
               label: "Company Table",
-              path: "/company/table"
+              path: "/company-table"
             }
           ]
         }
@@ -47,7 +47,7 @@ export const routes = [
       {
         label: "Company Page",
         name: "company-page",
-        path: "/company/page",
+        path: "/company-page",
         component: CompanyPage,
         meta: {
           breadcrumb: [
@@ -57,7 +57,7 @@ export const routes = [
             },
             { 
               label: "Company Page",
-              path: "/company/page"
+              path: "/company-page"
             }
           ]
         }

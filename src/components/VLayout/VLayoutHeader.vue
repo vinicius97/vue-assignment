@@ -10,8 +10,6 @@
       button.btn.btn--primary
         | New Smartlist
       v-header-nav
-      span Chrome
-      div.v-layout-header__user-options(role="button") Usuário
 </template>
 
 <script>
