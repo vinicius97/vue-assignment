@@ -42,9 +42,11 @@ export default {
 
   &__container {
     position: absolute;
-    width: 400px;
-    height: 300px;
+    min-width: 400px;
+    min-height: 300px;
     background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
     z-index: 3;
   }
 

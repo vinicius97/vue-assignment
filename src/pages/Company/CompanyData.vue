@@ -1,7 +1,5 @@
 <template lang="pug">
   v-container
-    v-modal(@close="handleCloseModal", @save="handleSaveModal", :show='showModal')
-      | Modal etc e tal
     .company-description
       | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -22,6 +20,10 @@
     .company-input__size--100
       v-form-text-area(
         label='Notes'
+      )
+    v-modal(@close="handleCloseModal", @save="handleSaveModal", :show='showModal')
+      v-form-text-area(
+        label='Additional Notes'
       )
     v-form-button(@click='handleShowModal') Additional notes
 </template>
