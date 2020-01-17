@@ -40,8 +40,8 @@ export default {
 
   &__scrollable-area {
     overflow-y: auto;
-    display: flex;
     flex-direction: column;
+    min-height: 100%;
   }
 
   &__container {
@@ -51,6 +51,7 @@ export default {
     width: 1200px;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: calc(100% - 180px);
   }
 
   &__body {
