@@ -1,5 +1,7 @@
 <template lang="pug">
   v-container
+    v-modal(@close="handleCloseModal" @save="handleSaveModal")
+      | Modal etc e tal
     .company-description
       | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -29,6 +31,7 @@ import VFormInputField from "Components/VForm/VFormInputField.vue";
 import VFormInputFieldMoney from "Components/VForm/VFormInputFieldMoney.vue";
 import VFormInputFieldMoneyRange from "Components/VForm/VFormInputFieldMoneyRange.vue";
 import VFormTextArea from "Components/VForm/VFormTextArea.vue";
+import VModal from "Components/VModal/VModal.vue";
 
 export default {
   components: {
@@ -36,28 +39,37 @@ export default {
     VFormInputField,
     VFormInputFieldMoney,
     VFormInputFieldMoneyRange,
-    VFormTextArea
+    VFormTextArea,
+    VModal
+  },
+  methods: {
+    handleCloseModal() {
+      console.log("close");
+    },
+    handleSaveModal() {
+      console.log("save");
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-  .company-description {
-    margin-bottom: 15px; 
-  }
-  .company-input {
-    &__size {
-      &--50 {
-        width: 50%;
-        flex-shrink: 0;
-        flex-basis: 50%;
-      }
+.company-description {
+  margin-bottom: 15px;
+}
+.company-input {
+  &__size {
+    &--50 {
+      width: 50%;
+      flex-shrink: 0;
+      flex-basis: 50%;
+    }
 
-      &--100 {
-        width: 100%;
-        flex-shrink: 0;
-        flex-basis: 100%;
-      }
+    &--100 {
+      width: 100%;
+      flex-shrink: 0;
+      flex-basis: 100%;
     }
   }
+}
 </style>
