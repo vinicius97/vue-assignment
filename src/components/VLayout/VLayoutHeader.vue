@@ -6,7 +6,7 @@
       .v-layout-header__search
         input.v-layout-header__search__input(type="text")
       .v-layout-header__or
-        OR
+        | OR
       button.btn.btn--primary
         | New Smartlist
       v-header-nav

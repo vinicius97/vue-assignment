@@ -33,6 +33,10 @@ export default {
       background: none;
     }
 
+    &--without-border > &__body {
+      padding: 0px;
+    }
+
     &__header {
       border-bottom: 1px solid;
 
