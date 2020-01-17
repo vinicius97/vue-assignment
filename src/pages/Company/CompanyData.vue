@@ -1,6 +1,6 @@
 <template lang="pug">
   v-container
-    v-modal(@close="handleCloseModal" @save="handleSaveModal")
+    v-modal(@close="handleCloseModal", @save="handleSaveModal", :show='showModal')
       | Modal etc e tal
     .company-description
       | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -23,10 +23,12 @@
       v-form-text-area(
         label='Notes'
       )
+    v-form-button(@click='handleShowModal') Additional notes
 </template>
 
 <script>
 import VContainer from "Components/VContainer/VContainer.vue";
+import VFormButton from 'Components/VForm/VFormButton.vue'
 import VFormInputField from "Components/VForm/VFormInputField.vue";
 import VFormInputFieldMoney from "Components/VForm/VFormInputFieldMoney.vue";
 import VFormInputFieldMoneyRange from "Components/VForm/VFormInputFieldMoneyRange.vue";
@@ -36,18 +38,27 @@ import VModal from "Components/VModal/VModal.vue";
 export default {
   components: {
     VContainer,
+    VFormButton,
     VFormInputField,
     VFormInputFieldMoney,
     VFormInputFieldMoneyRange,
     VFormTextArea,
     VModal
   },
+  data: function() {
+    return {
+      showModal: false
+    }
+  },
   methods: {
     handleCloseModal() {
-      console.log("close");
+      this.handleShowModal()
     },
     handleSaveModal() {
-      console.log("save");
+      this.handleShowModal()
+    },
+    handleShowModal() {
+      this.showModal = !this.showModal
     }
   }
 };

@@ -1,14 +1,18 @@
 <template lang="pug">
-  .modal
+  .modal(v-if='show')
     .modal__mask(@click="handleClose")
     .modal__container
       slot
       slot(name='actions')
-        button(@click="handleSave") Save
+        v-form-button(@click="handleSave") Save
 </template>
 
 <script>
+import VFormButton from 'Components/VForm/VFormButton.vue'
 export default {
+  components: {
+    VFormButton
+  },
   props: {
     show: Boolean
   },
@@ -48,7 +52,7 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 2;
   }
 }

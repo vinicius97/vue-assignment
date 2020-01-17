@@ -1,5 +1,5 @@
 <template lang="pug">
-  button.btn.btn--primary
+  button.btn.btn--primary(@click="$emit('click')")
     slot
 </template>
 
