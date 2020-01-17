@@ -5,7 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    
+    theme: 'dark'
   },
-  mutations: {}
+  mutations: {
+    changeTheme(state, theme) {
+      state.theme = theme
+    }
+  }
 });

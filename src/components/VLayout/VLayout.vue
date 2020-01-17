@@ -1,5 +1,5 @@
 <template lang="pug">
-  .v-layout
+  div(:class='layoutClass')
     v-layout-header
     .v-layout__scrollable-area
       .v-layout__container
@@ -12,10 +12,11 @@
 </template>
 
 <script>
+// Components
 import VLayoutFooter from "./VLayoutFooter.vue";
 import VLayoutHeader from "./VLayoutHeader.vue";
 import VLayoutSidebar from "./VLayoutSidebar.vue";
-import VLayoutBreadcrumb from './VLayoutBreadcrumb.vue'
+import VLayoutBreadcrumb from "./VLayoutBreadcrumb.vue";
 
 export default {
   components: {
@@ -26,6 +27,35 @@ export default {
   },
   props: {
     navigationOptions: Array
+  },
+  data: function() {
+    return {
+      layoutClass: 'v-layout'
+    }
+  },
+  computed: {
+    theme() {
+      return this.$store.state.theme
+    }
+  },
+  methods: {
+    handleLayoutClassTheme() {
+      if(this.$route.name === 'company-data') {
+        this.$store.commit('changeTheme', 'light')
+      } else {
+        this.$store.commit('changeTheme', 'dark')
+      }
+      
+      this.layoutClass =  `v-layout v-layout--${this.theme}`
+    }
+  },
+  watch: {
+    $route: function() {
+      this.handleLayoutClassTheme();
+    }
+  },
+  created: function() {
+    this.handleLayoutClassTheme()
   }
 };
 </script>
@@ -34,9 +64,16 @@ export default {
 .v-layout {
   display: flex;
   flex-direction: column;
-  background: #e7e9f3;
   height: 100%;
   overflow: hidden;
+
+  &--light {
+    background: #ffffff;
+  }
+
+  &--dark {
+    background: #e7e9f3;
+  }
 
   &__scrollable-area {
     overflow-y: auto;
